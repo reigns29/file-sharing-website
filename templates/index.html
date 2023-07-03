@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Sharing Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white py-4">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-lg font-bold">File Sharing Website</h1>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-md mx-auto bg-white p-8 rounded shadow fade-in">
+            <h2 class="text-lg font-medium mb-4">Upload File</h2>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="mb-4">
+                    <label for="file" class="block font-medium text-gray-700">Select File:</label>
+                    <input type="file" name="file" id="file" required class="mt-1">
+                </div>
+                <button type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Upload</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 fixed bottom-0 w-full">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 File Sharing Website. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+
+
